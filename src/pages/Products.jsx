@@ -4,7 +4,7 @@ import { useSearchParams } from "react-router-dom";
 import { SearchBox } from "components/SearchBox";
 
 
-export const Products = () => {
+const Products = () => {
     const [searchParams, setSearchParams] = useSearchParams();
     const productName = searchParams.get("name")??"";
         const products = getProducts();
@@ -23,3 +23,5 @@ export const Products = () => {
         </main>
     );
 }
+
+export default Products;
